@@ -26,12 +26,10 @@
         <div class="container" id="container">
             <div class="form-container">
                 <form action="#">
-                    <h1>Create Account</h1>
+                    <h1>Type something here... or not I dont care</h1>
                     <input type="text" id="myText" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
                     <button onclick="textFunction()">Text Field</button>
-                    <p class="text"></p>
+                    <p id="text"></p>
                 </form>
             </div>
             
@@ -43,8 +41,12 @@
     </footer>
 
     <script>
+
+        const textInput = [];
+
+
         function textFunction() {
-            let textInput = document.getElementById("myText").value;
+            textInput.push(document.getElementById("myText").value)
             document.getElementById("text").innerHTML = textInput;
         }
     </script>
