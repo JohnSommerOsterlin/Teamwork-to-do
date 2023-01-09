@@ -26,10 +26,11 @@
             <div class="form-container">
                 <form action="#">
                     <h1>Create Account</h1>
-                    <input type="text" placeholder="Name">
+                    <input type="text" id="myText" placeholder="Name">
                     <input type="email" placeholder="Email">
                     <input type="password" placeholder="Password">
-                    <button>Sign Up</button>
+                    <button onclick="textFunction()">Text Field</button>
+                    <p class="text"></p>
                 </form>
             </div>
             
@@ -39,6 +40,15 @@
     <footer>
         Copyright Team MatherFacker    2022
     </footer>
+
+    <script>
+        function textFunction() {
+            let textInput = document.getElementById("myText").value;
+            document.getElementById("text").innerHTML = textInput;
+        }
+    </script>
+
+    
 </body>
 
 </html>
